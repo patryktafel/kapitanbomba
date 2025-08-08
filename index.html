@@ -2,29 +2,56 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Kapitan Bomba - Animacja</title>
+  <title>Kapitan Bomba w akcji</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
       color: #fff;
-      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding: 50px;
     }
+
+    h1 {
+      font-size: 3em;
+      margin: 20px 0 10px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff0, 0 0 10px #f0f, 0 0 20px #0ff;
+      }
+      to {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #ff0, 0 0 30px #f0f;
+      }
+    }
+
     iframe {
-      border: none;
+      border: 5px solid #fff;
+      border-radius: 10px;
       width: 80%;
       height: 450px;
-      max-width: 800px;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
     }
-    h1 {
-      margin-bottom: 20px;
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
-  <h1>Kapitan Bomba w akcji 🚀</h1>
-  <p>Oglądaj kultową scenę z Kutasenaty!</p>
+  <h1>Kapitan Bomba 🚀</h1>
+  <p>Legendarna scena z Kutasenaty – w hiper stylu!</p>
   <iframe src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
 </body>
 </html>
