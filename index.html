@@ -18,9 +18,25 @@
   <!-- Logo i tytuł -->
   <img src="bomba-logo.png" alt="Kapitan Bomba" class="logo">
   <h1>Kapitan Bomba 🚀</h1>
+
+  <!-- BONUS: Sekcja wyróżniona -->
+  <section id="bonus-feature" class="featured-wrap">
+    <span class="featured-badge">BONUS</span>
+    <h2 class="featured-title">walaszek grubas i wizjoner</h2>
+    <div class="featured-frame">
+      <iframe
+        id="bonus-video"
+        src="https://www.youtube.com/embed/Kh4tSb8ikfI"
+        title="walaszek grubas i wizjoner"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="featured-caption">walaszek grubas i wizjoner</p>
+  </section>
+
   <p id="video-title">Galaktyczna scena z Kutasenatu</p>
 
-  <!-- Odtwarzacz -->
+  <!-- Odtwarzacz główny -->
   <iframe id="video-player" src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
 
   <!-- Miniaturki -->
@@ -41,6 +57,8 @@
       const overlay = document.getElementById('intro-overlay');
       setTimeout(() => {
         overlay.style.opacity = '0';
+        // Opcjonalnie usuń warstwę po zaniku:
+        setTimeout(() => overlay.remove(), 2000);
       }, 2000);
     });
 
