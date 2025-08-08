@@ -12,15 +12,18 @@
     <img src="bomba-logo.png" class="intro-logo">
   </div>
 
+  <!-- Dźwięk kliknięcia -->
   <audio id="click-sound" src="laser.mp3" preload="auto"></audio>
 
+  <!-- Logo i tytuł -->
   <img src="bomba-logo.png" alt="Kapitan Bomba" class="logo">
-
   <h1>Kapitan Bomba 🚀</h1>
   <p id="video-title">Galaktyczna scena z Kutasenatu</p>
 
+  <!-- Odtwarzacz -->
   <iframe id="video-player" src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
 
+  <!-- Miniaturki -->
   <div class="video-thumbnails">
     <img src="https://img.youtube.com/vi/9LXziNjPFHM/0.jpg" onclick="changeVideo('9LXziNjPFHM', 'Kutasenat')" alt="Kutasenat">
     <img src="https://img.youtube.com/vi/FhXNSHrw2IA/0.jpg" onclick="changeVideo('FhXNSHrw2IA', 'Kabelki czy tory')" alt="Kabelki czy tory">
@@ -28,9 +31,12 @@
     <img src="https://img.youtube.com/vi/zlzuWFKKzGQ/0.jpg" onclick="changeVideo('zlzuWFKKzGQ', 'Krzyś i Michałek')" alt="Krzyś i Michałek">
   </div>
 
+  <!-- Przycisk powrotu -->
   <button onclick="returnToMain()" class="glow-button">Wróć do filmu głównego</button>
 
+  <!-- Skrypty -->
   <script>
+    // Intro fade-out
     window.addEventListener('load', () => {
       const overlay = document.getElementById('intro-overlay');
       setTimeout(() => {
@@ -38,6 +44,7 @@
       }, 2000);
     });
 
+    // Gwiazdy w tle
     for (let i = 0; i < 100; i++) {
       const star = document.createElement("div");
       star.className = "star";
@@ -46,6 +53,7 @@
       document.body.appendChild(star);
     }
 
+    // Zmiana filmu + klik
     function changeVideo(videoId, title) {
       document.getElementById("video-player").src = "https://www.youtube.com/embed/" + videoId;
       document.getElementById("video-title").textContent = title;

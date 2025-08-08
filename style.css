@@ -75,7 +75,7 @@ button.glow-button {
   50% { opacity: 1; }
 }
 
-/* Intro overlay */
+/* Intro overlay + animacja logo */
 #intro-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -87,6 +87,7 @@ button.glow-button {
   justify-content: center;
   z-index: 9999;
   transition: opacity 2s ease;
+  pointer-events: none; /* Naprawa: kliknięcia działają pod spodem! */
 }
 
 .intro-logo {
