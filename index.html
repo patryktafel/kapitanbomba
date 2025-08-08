@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio id="click-sound" src="laser.mp3" preload="auto"></audio> <!-- Dodany dźwięk -->
+
   <img src="bomba-logo.png" alt="Kapitan Bomba" class="logo">
 
   <h1>Kapitan Bomba 🚀</h1>
@@ -21,7 +23,7 @@
     <img src="https://img.youtube.com/vi/zlzuWFKKzGQ/0.jpg" onclick="changeVideo('zlzuWFKKzGQ', 'Krzyś i Michałek')" alt="Krzyś i Michałek">
   </div>
 
-  <button onclick="returnToMain()">Wróć do filmu głównego</button>
+  <button onclick="returnToMain()" class="glow-button">Wróć do filmu głównego</button>
 
   <script>
     // Gwiazdy w tle
@@ -33,13 +35,13 @@
       document.body.appendChild(star);
     }
 
-    // Zmiana filmu + tytułu
+    // Zmiana filmu + dźwięk + tytuł
     function changeVideo(videoId, title) {
       document.getElementById("video-player").src = "https://www.youtube.com/embed/" + videoId;
       document.getElementById("video-title").textContent = title;
+      document.getElementById("click-sound").play(); // Efekt dźwiękowy
     }
 
-    // Powrót do filmu głównego
     function returnToMain() {
       changeVideo('9LXziNjPFHM', 'Kutasenat');
     }

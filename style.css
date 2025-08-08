@@ -5,6 +5,7 @@ body {
   text-align: center;
   overflow-x: hidden;
   position: relative;
+  padding-bottom: 100px;
 }
 
 .logo {
@@ -32,22 +33,32 @@ iframe {
   height: 90px;
   cursor: pointer;
   border: 3px solid transparent;
-  transition: border-color 0.3s;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .video-thumbnails img:hover {
+  transform: scale(1.08);
   border-color: #ffcc00;
+  box-shadow: 0 0 12px #ffcc00;
 }
 
-button {
+button.glow-button {
   background-color: #ffcc00;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-family: 'Orbitron', sans-serif;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0 0 10px #fff;
+  margin-top: 10px;
+  box-shadow: 0 0 15px #fff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 5px #fff; }
+  50%  { box-shadow: 0 0 20px #ff0; }
+  100% { box-shadow: 0 0 5px #fff; }
 }
 
 .star {
