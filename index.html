@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Kapitan Bomba w Galaktyce</title>
+
+  <!-- Czcionka sci-fi -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <!-- Połączenie z zewnętrznym stylem -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Animowane logo -->
   <img src="bomba-logo.png" alt="Kapitan Bomba" class="logo">
 
   <h1>Kapitan Bomba 🚀</h1>
   <p>Galaktyczna scena z Kutasenatu</p>
 
+  <!-- Film główny -->
   <iframe src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
 
+  <!-- Miniaturki filmów -->
   <div class="video-thumbnails">
     <img src="https://img.youtube.com/vi/FhXNSHrw2IA/0.jpg" onclick="changeVideo('FhXNSHrw2IA')" alt="Kabelki czy tory">
     <img src="https://img.youtube.com/vi/Wpz5jFkmKX0/0.jpg" onclick="changeVideo('Wpz5jFkmKX0')" alt="Krzyś i Ryszard">
     <img src="https://img.youtube.com/vi/zlzuWFKKzGQ/0.jpg" onclick="changeVideo('zlzuWFKKzGQ')" alt="Krzyś i Michałek">
   </div>
 
+  <!-- Generowanie gwiazd -->
   <script>
-    // Gwiazdy w tle
     for (let i = 0; i < 100; i++) {
       let star = document.createElement("div");
       star.className = "star";
@@ -30,7 +37,7 @@
       document.body.appendChild(star);
     }
 
-    // Zmiana filmu
+    // Zmiana filmu po kliknięciu
     function changeVideo(videoId) {
       document.querySelector("iframe").src = "https://www.youtube.com/embed/" + videoId;
     }
