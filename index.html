@@ -21,6 +21,8 @@
     <img src="https://img.youtube.com/vi/zlzuWFKKzGQ/0.jpg" onclick="changeVideo('zlzuWFKKzGQ', 'Krzyś i Michałek')" alt="Krzyś i Michałek">
   </div>
 
+  <button onclick="returnToMain()">Wróć do filmu głównego</button>
+
   <script>
     // Gwiazdy w tle
     for (let i = 0; i < 100; i++) {
@@ -35,6 +37,11 @@
     function changeVideo(videoId, title) {
       document.getElementById("video-player").src = "https://www.youtube.com/embed/" + videoId;
       document.getElementById("video-title").textContent = title;
+    }
+
+    // Powrót do filmu głównego
+    function returnToMain() {
+      changeVideo('9LXziNjPFHM', 'Kutasenat');
     }
   </script>
 </body>
