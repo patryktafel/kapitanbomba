@@ -19,6 +19,11 @@
 
   <!-- Film z YouTube -->
   <iframe src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
+<div class="video-thumbnails">
+  <img src="https://img.youtube.com/vi/FhXNSHrw2IA/0.jpg" onclick="changeVideo('FhXNSHrw2IA')" alt="Kabelki czy tory">
+  <img src="https://img.youtube.com/vi/Wpz5jFkmKX0/0.jpg" onclick="changeVideo('Wpz5jFkmKX0')" alt="Krzyś i Ryszard">
+  <img src="https://img.youtube.com/vi/zlzuWFKKzGQ/0.jpg" onclick="changeVideo('zlzuWFKKzGQ')" alt="Krzyś i Michałek">
+</div>
 
   <!-- Gwiazdy w tle -->
   <script>
@@ -30,5 +35,11 @@
       document.body.appendChild(star);
     }
   </script>
+<script>
+  function changeVideo(videoId) {
+    document.querySelector("iframe").src = "https://www.youtube.com/embed/" + videoId;
+  }
+</script>
+
 </body>
 </html>
