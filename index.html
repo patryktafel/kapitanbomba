@@ -15,22 +15,23 @@
   <iframe id="video-player" src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
 
   <div class="video-thumbnails">
+    <img src="https://img.youtube.com/vi/9LXziNjPFHM/0.jpg" onclick="changeVideo('9LXziNjPFHM', 'Kutasenat')" alt="Kutasenat">
     <img src="https://img.youtube.com/vi/FhXNSHrw2IA/0.jpg" onclick="changeVideo('FhXNSHrw2IA', 'Kabelki czy tory')" alt="Kabelki czy tory">
     <img src="https://img.youtube.com/vi/Wpz5jFkmKX0/0.jpg" onclick="changeVideo('Wpz5jFkmKX0', 'Krzyś i Ryszard')" alt="Krzyś i Ryszard">
     <img src="https://img.youtube.com/vi/zlzuWFKKzGQ/0.jpg" onclick="changeVideo('zlzuWFKKzGQ', 'Krzyś i Michałek')" alt="Krzyś i Michałek">
   </div>
 
   <script>
-    // Gwiezdne tło
+    // Gwiazdy w tle
     for (let i = 0; i < 100; i++) {
-      let star = document.createElement("div");
+      const star = document.createElement("div");
       star.className = "star";
       star.style.top = Math.random() * window.innerHeight + "px";
       star.style.left = Math.random() * window.innerWidth + "px";
       document.body.appendChild(star);
     }
 
-    // Zmiana filmu + aktualizacja tytułu
+    // Zmiana filmu + tytułu
     function changeVideo(videoId, title) {
       document.getElementById("video-player").src = "https://www.youtube.com/embed/" + videoId;
       document.getElementById("video-title").textContent = title;
