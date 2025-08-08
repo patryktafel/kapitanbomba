@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <audio id="click-sound" src="laser.mp3" preload="auto"></audio> <!-- Dodany dźwięk -->
+  <!-- Intro -->
+  <div id="intro-overlay">
+    <img src="bomba-logo.png" class="intro-logo">
+  </div>
+
+  <audio id="click-sound" src="laser.mp3" preload="auto"></audio>
 
   <img src="bomba-logo.png" alt="Kapitan Bomba" class="logo">
 
@@ -26,7 +31,13 @@
   <button onclick="returnToMain()" class="glow-button">Wróć do filmu głównego</button>
 
   <script>
-    // Gwiazdy w tle
+    window.addEventListener('load', () => {
+      const overlay = document.getElementById('intro-overlay');
+      setTimeout(() => {
+        overlay.style.opacity = '0';
+      }, 2000);
+    });
+
     for (let i = 0; i < 100; i++) {
       const star = document.createElement("div");
       star.className = "star";
@@ -35,11 +46,10 @@
       document.body.appendChild(star);
     }
 
-    // Zmiana filmu + dźwięk + tytuł
     function changeVideo(videoId, title) {
       document.getElementById("video-player").src = "https://www.youtube.com/embed/" + videoId;
       document.getElementById("video-title").textContent = title;
-      document.getElementById("click-sound").play(); // Efekt dźwiękowy
+      document.getElementById("click-sound").play();
     }
 
     function returnToMain() {
