@@ -2,56 +2,33 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Kapitan Bomba w akcji</title>
+  <title>Kapitan Bomba w Galaktyce</title>
+
+  <!-- Czcionka sci-fi -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to right, #1f1c2c, #928dab);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
 
-    h1 {
-      font-size: 3em;
-      margin: 20px 0 10px;
-      animation: glow 2s infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #ff0, 0 0 10px #f0f, 0 0 20px #0ff;
-      }
-      to {
-        text-shadow: 0 0 10px #0ff, 0 0 20px #ff0, 0 0 30px #f0f;
-      }
-    }
-
-    iframe {
-      border: 5px solid #fff;
-      border-radius: 10px;
-      width: 80%;
-      height: 450px;
-      max-width: 900px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-  </style>
+  <!-- Połączenie z zewnętrznym stylem -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Animowane logo -->
+  <img src="bomba-logo.png" alt="Kapitan Bomba" class="logo">
+
   <h1>Kapitan Bomba 🚀</h1>
-  <p>Legendarna scena z Kutasenaty – w hiper stylu!</p>
+  <p>Galaktyczna scena z Kutasenaty</p>
+
+  <!-- Film z YouTube -->
   <iframe src="https://www.youtube.com/embed/9LXziNjPFHM" allowfullscreen></iframe>
+
+  <!-- Gwiazdy w tle -->
+  <script>
+    for (let i = 0; i < 100; i++) {
+      let star = document.createElement("div");
+      star.className = "star";
+      star.style.top = Math.random() * window.innerHeight + "px";
+      star.style.left = Math.random() * window.innerWidth + "px";
+      document.body.appendChild(star);
+    }
+  </script>
 </body>
 </html>
