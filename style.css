@@ -20,7 +20,7 @@ body {
   padding-bottom: 100px;
 }
 
-/* Chroni treść przed gwiazdami */
+/* Treść nad gwiazdami */
 .logo, h1, p, iframe, .video-thumbnails {
   position: relative;
   z-index: 1;
@@ -40,7 +40,7 @@ body {
   100% { transform: translateY(0); }
 }
 
-/* Tytuł strony */
+/* Tytuł */
 h1 {
   font-size: 2.5em;
   margin: 10px 0;
@@ -50,6 +50,7 @@ h1 {
 p {
   margin: 0 0 10px 0;
   opacity: 0.9;
+  font-size: 1.2em;
 }
 
 @keyframes glow {
@@ -122,6 +123,7 @@ iframe {
 @media (max-width: 600px) {
   .logo { width: 140px; margin: 20px auto 10px; }
   h1 { font-size: 1.9em; }
+  p { font-size: 1em; }
   .video-thumbnails img { width: 120px; }
 }
 
